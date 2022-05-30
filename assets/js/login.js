@@ -1,4 +1,5 @@
 $(function() {
+    
     //登陆注册切换功能
     $('#link_reg').on('click', () => {
         $('.login-box').hide();
