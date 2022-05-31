@@ -9,7 +9,7 @@ function getUserInfo(){
         success:(res) => {
             if(res.status !== 0) return layer.msg('获取用户信息失败')
             layer.msg('获取用户信息成功')
-            // console.log(res.data);
+            console.log(res.data);
             renderAvatar(res.data)
         }
     })
@@ -18,9 +18,9 @@ const renderAvatar = (user) =>{
     // console.log(user);
     let uname = user.nickname || user.username;
     // 欢迎渲染
-    $('#welcome').html(`欢迎${uname}`);
+    $('#welcome').html(`欢迎 ${uname}`);
     // 按需要渲染头像
-    if(user.user_pic !==null){
+    if(user.user_pic !== null){
         // 设置图片头像
         $('.layui-nav-img').attr('src',user.user_pic)
         $('.text-avatar').hide()

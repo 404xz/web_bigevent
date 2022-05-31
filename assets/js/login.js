@@ -48,6 +48,7 @@ $(function() {
          $.ajax({
              type:'POST',
              url:'/api/login',
+             //拼接成age=12&name=xz
              data:$(this).serialize(),
              success:(res) => {
                  if(res.status !== 0) return layer.msg('登陆失败！');
