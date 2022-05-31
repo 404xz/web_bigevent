@@ -17,7 +17,7 @@ $(function(){
       })
     
     $('#file').on('change',function(e){
-        console.log(e);
+        // console.log(e);
         const fileLength = e.target.files.length;
         if(fileLength === 0) return;
         //拿到用户上传的文件

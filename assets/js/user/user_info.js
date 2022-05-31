@@ -31,7 +31,7 @@ $(function(){
             success:(res) => {
                 if(res.status !== 0) return layer.msg('修改用户信息失败！')
                 layer.msg('修改用户信息成功！')
-                console.log(res);
+                // console.log(res);
                 //调用父级函数，渲染主页面
                 window.parent.getUserInfo()
             }
