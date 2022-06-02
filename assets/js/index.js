@@ -45,3 +45,8 @@ $('#btnloginout').on('click',function(){
 
 
 getUserInfo();
+
+function change() {
+    $('#change').addClass('layui-this').siblings('dd').removeClass('layui-this')
+    // $('#change').attr('class','layui-this').siblings('dd').attr('class','')
+}

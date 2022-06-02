@@ -81,6 +81,25 @@ $(function(){
             },
         });
     });
-    
+
+    //删除文章分类
+    $('tbody').on('click','.btn-delete',function(e){
+        e.preventDefault();
+        const id = $(this).siblings('.btn-edit').attr("data-id");
+        // 提示用户是否删除
+        layer.confirm("确定删除吗？", { icon: 3, title: "   提示" }, function (index) {
+            $.ajax({
+                type:'GET', 
+                url:"/my/article/deletecate/" + id,
+                success:(res) => {
+                    if(res.status !== 0) return layer.  msg('删除文章类别失败！');
+                    layer.msg('删除文章类别成功！');
+                    layer.close(index);
+                    initArtCateList();
+                }
+            })
+        })
+
+    })
     //
 })
